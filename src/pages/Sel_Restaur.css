@@ -1,0 +1,116 @@
+:root {
+  --selrest-header-height: 120px;
+  --bottom-menu-space: 120px;
+}
+
+.sel-rest-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff3e6;
+}
+
+.selrest-fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--selrest-header-height);
+  background-color: #fff3e6;
+  z-index: 2000;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.selrest-scrollable {
+  margin-top: var(--selrest-header-height);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100vh - var(--selrest-header-height) - var(--bottom-menu-space));
+  padding: 10px 16px 24px 16px;
+  flex: none;
+}
+
+.selrest-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.selrest-list {
+  padding: 4px 0;
+}
+
+.restaurant-card {
+  padding: 20px;
+  margin-bottom: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restaurant-card:active {
+  transform: scale(0.97);
+}
+
+.rest-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rest-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-main);
+  flex: 1;
+}
+
+.rest-distance-badge {
+  background: var(--primary);
+  color: #000;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.rest-address {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.rest-address i {
+  margin-right: 4px;
+  color: var(--primary);
+}
+
+.rest-distance {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.rest-action-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+  align-self: flex-end;
+}

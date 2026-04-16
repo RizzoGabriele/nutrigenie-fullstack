@@ -1,0 +1,88 @@
+.food-card {
+  margin: 110px 20px 20px 20px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.meal-info-title {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  height: 70px;
+}
+
+.food-tags {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tag-date {
+  font-size: 20px;
+  background-color: #f7ad45 !important;
+  color: black;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.food-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  margin-bottom: 70px !important;
+}
+
+.food-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.food-kcal {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 10px 0;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.food-info {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 10px;
+}
+
+.food-info p {
+  margin: 12px 0;
+  font-size: 18px;
+  font-weight: 700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+
+.food-info p span {
+  font-weight: 500;
+  font-size: 18px;
+  color: #444;
+}
+
+.firstLine {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}

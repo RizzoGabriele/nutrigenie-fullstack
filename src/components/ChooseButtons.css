@@ -1,0 +1,55 @@
+.circle-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.circle-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: white;
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s;
+}
+
+.circle-btn:active {
+  transform: scale(0.95);
+}
+
+.circle-btn:disabled {
+  opacity: 0.3;          
+  cursor: not-allowed;   
+  pointer-events: none;  
+  border-color: #666;  
+}
+
+.red-btn {
+  background-color: #ff6b6b; 
+  color:white;
+}
+
+.green-btn {
+  background-color: #69db7c; 
+  color:white;
+}
+
+.yellow-btn {
+  background-color: #ffd43b; 
+
+}
+
+.small-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+}

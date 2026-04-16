@@ -1,0 +1,253 @@
+
+:root {
+  --primary: #f7ad45;
+  --primary-dark: #e57a0f;
+  --bg-app: #fff3e6;
+  --text-main: #1a1a1a;
+  --text-muted: #555;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(18px) saturate(180%);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  --inner-glow: inset 0 0 32px rgba(255, 255, 255, 0.2);
+  --radius-xl: 35px;
+  --radius-lg: 20px;
+  --radius-sm: 12px;
+  --header-height: 90px;
+  --statusbar-height: 44px;
+}
+
+:root {
+  --history-header-height: 100px; 
+  --bottom-menu-space: 88px;    
+}
+
+#root {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-app);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  padding-bottom: 0 !important;
+}
+* {
+  scrollbar-width: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+* {
+  -ms-overflow-style: none !important;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.liquid-glass {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--inner-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.download-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.food-information{
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.information button {
+  height: 60px;
+  width: 100%;
+  border-radius: var(--radius-sm) !important;
+  font-weight: 700;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.information .collapse {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border) !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  margin-top: -5px;
+}
+
+button, .custom-btn, .btn-save, .btn-cancel, .edit-btn {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 770;
+}
+
+
+.page-title {
+  margin-top: calc(var(--statusbar-height) + 15px); 
+  margin-bottom: 20px;
+  padding-top: 5px;
+  
+  font-family: var(--font-main);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase; 
+  color: var(--text-main);
+  text-align: center;
+  width: 100%;
+}
+
+.collapsing {
+  transition: height 0.25s ease-in-out !important;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 50px;
+}
+.restaurant-page {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 60px;     
+  padding-bottom: 120px; 
+}
+
+.restaurant-top-cover {
+  position: sticky;
+  top: 0px;
+  height: 50px;
+  background: #fff3e6;
+  z-index: 1000;
+}
+
+.title-select-box {
+  padding: 0px;
+  background: transparent;
+  text-align: center;
+}
+
+.custom-btn {
+  background: var(--primary);
+  color: black;
+  border: none;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.custom-btn:active {
+  transform: scale(0.96);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.firstLine {
+  position: fixed;
+  top: var(--statusbar-height);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 9999;
+  background: transparent;
+  height: 50px;
+}
+
+.scroll-area {
+  height: calc(100vh - var(--header-height) - 80px);
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+.menu-host{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  background: transparent;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.fullscreen-btn {
+  position: fixed;
+  top: 50px;
+  right: 16px;
+  z-index: 9999;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #f7ad45;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}

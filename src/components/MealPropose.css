@@ -1,0 +1,111 @@
+
+.food-card {
+  margin: 60px 10px 10px 10px;
+  padding: 60px 25px;
+  margin-top: 110px;
+  text-align: center;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.meal-info-title {
+  font-size: 28px !important; 
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  margin-top: -10px;
+  color: #000;
+}
+
+
+.title-select-restaurant{
+  font-size: 20px !important;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.all-right {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+}
+.food-tags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.food-tags .badge {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #eee7e7;
+  border: none;
+}
+
+.tag-restaurant{
+    background-color: #7b6f19 !important;
+}
+
+.tag-category{
+    background-color: #f7ad45 !important;
+}
+
+.food-image {
+  width: 190px !important;
+  height: 160px !important;
+  object-fit: contain;
+  margin-top:0px;
+  margin-bottom: -30px !important;
+  transition: transform 0.3s ease;
+}
+
+.food-kcal {
+  font-size: 28px !important;
+  font-weight: 900;
+  margin: 20px 0;
+  margin-top: -24px !important;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.food-info {
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: -12px;
+}
+
+.food-info p {
+  margin: 3px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;  
+  font-weight: 600;
+  color: #444;
+}
+
+.food-info span {
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  display: inline-flex;
+  justify-content: left;
+  min-width: 60px; 
+}

@@ -1,0 +1,78 @@
+
+
+
+.maps-box {
+  width: 90% !important;
+  margin: 0 auto 25px auto !important;
+  overflow: hidden;
+  border-radius: var(--radius-lg) !important;
+}
+
+.maps-label {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.scan-qr-text {
+  padding: 0 30px;
+}
+
+.scan-qr-text p {
+  font-weight: 680;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.qr-container-glass {
+  width: 85%;
+  margin: 0 auto;
+  padding: 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.qr-wrapper {
+  background: white;
+  padding: 15px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.qr-image-content {
+  max-width: 100%;
+  height: auto;
+}
+
+.download-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.download-btn-icon {
+  font-size: 28px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: -5px;
+}
+
+.download-btn-icon:active {
+  transform: scale(0.9);
+}
+
+.download-text {
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-main);
+}

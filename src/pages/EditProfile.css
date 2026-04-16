@@ -1,0 +1,382 @@
+
+.editprofile-page {
+  background: #fff3e6;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.editprofile-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff3e6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1001;
+}
+
+
+.editprofile-scroll-container {
+  margin-top: 110px;
+  flex: 1;
+  padding: 0 20px 100px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.editprofile-card {
+  width: 100%;
+  margin-top: 10px;
+  max-height: 73vh; 
+  display: flex;
+  flex-direction: column; 
+  border-radius: 24px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card-scroll-content {
+  flex: 1;
+  overflow-y: scroll !important;
+  padding: 20px 25px 10px 25px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) rgba(0, 0, 0, 0.05); 
+}
+
+.card-scroll-content::-webkit-scrollbar {
+  display: block !important;
+  width: 6px;
+}
+
+.card-scroll-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.card-scroll-content::-webkit-scrollbar-thumb {
+  background: var(--primary);    
+  border-radius: 10px;            
+  border: 2px solid var(--primary) !important;
+}
+
+.card-scroll-content::-webkit-scrollbar-thumb:hover {
+  background: #e69a30;            
+}
+
+.buttons-fixed {
+  display: flex;
+  gap: 16px;
+  padding: 15px 25px 25px 25px;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+  z-index: 10;
+}
+
+.btn-cancel, .btn-save {
+  flex: 1;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-cancel { 
+  background: #f8f8f8; color: #333; 
+  border: 2px solid var(--text-main) !important; 
+}
+.btn-save { background: #f7ad45; color: black; }
+
+.avatar-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f0f0f0;
+  border: 3px solid #f7ad45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+}
+
+.edit-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.avatar-wrapper:hover .edit-overlay {
+  opacity: 1;
+}
+
+.edit-overlay i {
+  color: white;
+  font-size: 24px;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.field label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #444;
+}
+
+.editprofile-card input[type="text"],
+.editprofile-card input[type="date"],
+.editprofile-card input[type="tel"],
+.editprofile-card input {
+  width: 100%;
+  padding: 12px 15px !important;
+  border-radius: 10px !important;
+  border: 1px solid #ccc !important;
+  font-size: 16px;
+  background: white !important;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.editprofile-card input:focus {
+  border-color: #333 !important;
+  outline: none;
+  background-color: #f9f9f9 !important;
+}
+
+.name-row-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.half { 
+  flex: 1; 
+}
+
+.phone-input-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.phone-input-container .custom-select-wrapper {
+  width: 135px !important;
+  flex-shrink: 0;
+}
+
+.phone-input-container input {
+  flex: 1;
+  min-width: 0;
+}
+
+.editprofile-card .custom-select-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.editprofile-card .custom-select-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 12px 15px !important;
+  background: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: all 0.2s ease !important;
+  font-size: 16px !important;
+  box-sizing: border-box !important;
+}
+
+
+
+.editprofile-card .custom-select-header.open {
+  background-color: #f9f9f9 !important;
+  border-color: #333 !important;
+}
+
+.editprofile-card .custom-select-options {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  background: #fff !important;
+  border: 1px solid #333 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  max-height: 220px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y !important;
+  overscroll-behavior: contain !important;
+  z-index: 9999 !important;
+  will-change: scroll-position !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important; 
+}
+
+.editprofile-card .custom-select-options::-webkit-scrollbar {
+  display: none !important;
+}
+
+.editprofile-card .custom-option {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 15px !important;
+  cursor: pointer !important;
+  border-bottom: 1px solid #eee !important;
+  transition: background-color 0.15s ease !important;
+  font-size: 16px !important;
+  touch-action: pan-y !important;
+}
+
+.editprofile-card .custom-option:last-child {
+  border-bottom: none !important;
+}
+
+.editprofile-card .custom-option:hover {
+  background-color: #f5f5f5 !important;
+}
+
+.editprofile-card .custom-option.selected {
+  background-color: #f4a261 !important;
+  font-weight: 600 !important;
+}
+
+.editprofile-card .custom-option .check-col {
+  margin-right: 10px !important;
+  display: inline-block !important;
+  width: 20px !important;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .editprofile-card .custom-select-options {
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+.no-data {
+  padding: 12px 15px !important;
+  text-align: center !important;
+  color: #999 !important;
+  font-size: 14px !important;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.btn-cancel, .btn-save {
+  flex: 1;
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-cancel { 
+  background: #f8f8f8; 
+  color: #333; 
+}
+
+.btn-save { 
+  background: #f7ad45; 
+  color: black; 
+}
+
+.popup-top {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 24px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  z-index: 2000;
+  color: #28a745;
+  font-weight: 700;
+}
+
+.editprofile-card .input-error {
+  border: 2px solid #ff4d4d !important;
+  background-color: #fff9f9 !important;
+}
+
+.error-text {
+  color: #ff4d4d;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 4px;
+  display: block;
+  animation: shake 0.2s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.editprofile-card input {
+  color: black !important;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+  filter: brightness(0);
+  cursor: pointer;
+}
