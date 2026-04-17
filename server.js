@@ -466,7 +466,7 @@ app.post("/api/meal/:mealId/complete", (req, res) => {
                 if (err || !meal) {
                   console.error("Errore select meal:", err);
                   db.run("ROLLBACK");
-                  return res.status(500).json({ error: "Pasto non trovato" });
+                  return res.status(500).json({ error: "Meal not found" });
                 }
 
                 const sqlItem = `
@@ -528,7 +528,7 @@ app.post("/api/meal/:mealId/complete", (req, res) => {
                           }
 
                           return res.json({
-                            message: "Pasto completato e registrato con successo!",
+                            message: "Meal completed and successfully recorded!",
                           });
                         });
                       }
